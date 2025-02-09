@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,56 +36,57 @@
 </head>
 <body>
     <nav>
-        <a href="#" id="home-link">Home</a>
-        <a href="#" id="login-link">Login</a>
-        <a href="#" id="signup-link">Signup</a>
-        <a href="#" id="feedback-link">Feedback</a>
+        <a href="index.html" id="home-link">Головна</a>
+        <a href="login.html" id="login-link">Вхід</a>
+        <a href="signup.html" id="signup-link">Реєстрація</a>
+        <a href="feedback.html" id="feedback-link">Зворотний зв'язок</a>
     </nav>
 
     <div id="home" class="content">
-        <h1>Welcome to Home</h1>
-        <p>This is the home page.</p>
+        <h1>Ласкаво просимо на головну</h1>
+        <p>Це головна сторінка сайту.</p>
+        <img src="https://th.bing.com/th/id/OIP.IQBh6w74gF29WGdHsw7pDAHaEs?w=1024&h=650&rs=1&pid=ImgDetMain" alt="Фото головної сторінки" style="max-width: 100%; height: auto;">
     </div>
 
     <div id="login" class="content hidden">
-        <h1>Login</h1>
+        <h1>Вхід</h1>
         <form>
-            <label for="username">Username:</label>
+            <label for="username">Логін:</label>
             <input type="text" id="username" name="username" required><br><br>
 
-            <label for="password">Password:</label>
+            <label for="password">Пароль:</label>
             <input type="password" id="password" name="password" required><br><br>
 
-            <button type="submit">Login</button>
+            <button type="submit">Увійти</button>
         </form>
     </div>
 
     <div id="signup" class="content hidden">
-        <h1>Signup</h1>
+        <h1>Реєстрація</h1>
         <form>
-            <label for="new-username">Username:</label>
+            <label for="new-username">Логін:</label>
             <input type="text" id="new-username" name="new-username" required><br><br>
 
-            <label for="email">Email:</label>
+            <label for="email">Емейл:</label>
             <input type="email" id="email" name="email" required><br><br>
 
-            <label for="new-password">Password:</label>
+            <label for="new-password">Пароль:</label>
             <input type="password" id="new-password" name="new-password" required><br><br>
 
-            <button type="submit">Signup</button>
+            <button type="submit">Зареєструватися</button>
         </form>
     </div>
 
     <div id="feedback" class="content hidden">
-        <h1>Feedback</h1>
+        <h1>Відгук</h1>
         <form>
-            <label for="name">Your Name:</label>
+            <label for="name">Ваше ім'я:</label>
             <input type="text" id="name" name="name" required><br><br>
 
-            <label for="feedback">Your Feedback:</label>
+            <label for="feedback">Ваш відгук:</label>
             <textarea id="feedback-text" name="feedback" required></textarea><br><br>
 
-            <button type="submit">Submit</button>
+            <button type="submit">Надіслати</button>
         </form>
     </div>
 
