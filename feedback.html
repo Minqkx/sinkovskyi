@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зворотний зв'язок</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="login.html">Вхід</a></li>
+                <li><a href="signup.html">Реєстрація</a></li>
+                <li><a href="feedback.html">Зворотний зв'язок</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="form-container">
+            <h2>Залиште ваш відгук</h2>
+            <form action="/feedback" method="POST">
+                <label for="name">Ваше ім'я:</label>
+                <input type="text" id="name" name="name" placeholder="Введіть ім'я" required>
+                <label for="gender">Стать:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Чоловік</option>
+                    <option value="female">Жінка</option>
+                </select>
+                <label for="feedback">Відгук:</label>
+                <textarea id="feedback" name="feedback" placeholder="Напишіть ваш відгук" required></textarea>
+                <button type="submit">Надіслати</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>

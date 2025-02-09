@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вхід</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="login.html">Вхід</a></li>
+                <li><a href="signup.html">Реєстрація</a></li>
+                <li><a href="feedback.html">Зворотний зв'язок</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="form-container">
+            <h2>Вхід до акаунту</h2>
+            <form action="/login" method="POST">
+                <label for="username">Логін:</label>
+                <input type="text" id="username" name="username" placeholder="Введіть логін" required>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" placeholder="Введіть пароль" required>
+                <button type="submit">Увійти</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>
