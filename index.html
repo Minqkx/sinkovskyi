@@ -3,111 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Menu Navigation</title>
+    <title>Головна сторінка</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9fafb;
+            color: #1f2937;
             margin: 0;
             padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            padding: 15px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
         nav {
-            background-color: #333;
-            color: white;
-            padding: 10px;
             display: flex;
             justify-content: space-around;
+            max-width: 900px;
+            margin: 0 auto;
         }
         nav a {
             color: white;
             text-decoration: none;
-            padding: 8px 15px;
-            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 10px;
+            transition: color 0.3s;
         }
         nav a:hover {
-            background-color: #575757;
+            color: #4fa3ff;
         }
         .content {
+            width: 60%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #1f2937;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            width: 300px;
+            height: auto;
+            border: 3px solid #1f2937;
+            border-radius: 10px;
+        }
+        .articles {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
             padding: 20px;
         }
-        .hidden {
-            display: none;
+        article {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        article h3 {
+            font-family: 'Georgia', serif;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        article p {
+            font-size: 1rem;
+            color: #555;
+        }
+        article a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        article a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html" id="home-link">Головна</a>
-        <a href="login.html" id="login-link">Вхід</a>
-        <a href="signup.html" id="signup-link">Реєстрація</a>
-        <a href="feedback.html" id="feedback-link">Зворотний зв'язок</a>
-    </nav>
-
-    <div id="home" class="content">
-        <h1>Ласкаво просимо на головну</h1>
-        <p>Це головна сторінка сайту.</p>
-        <img src="https://th.bing.com/th/id/OIP.IQBh6w74gF29WGdHsw7pDAHaEs?w=1024&h=650&rs=1&pid=ImgDetMain" alt="Фото головної сторінки" style="max-width: 100%; height: auto;">
-    </div>
-
-    <div id="login" class="content hidden">
-        <h1>Вхід</h1>
-        <form>
-            <label for="username">Логін:</label>
-            <input type="text" id="username" name="username" required><br><br>
-
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" name="password" required><br><br>
-
-            <button type="submit">Увійти</button>
-        </form>
-    </div>
-
-    <div id="signup" class="content hidden">
-        <h1>Реєстрація</h1>
-        <form>
-            <label for="new-username">Логін:</label>
-            <input type="text" id="new-username" name="new-username" required><br><br>
-
-            <label for="email">Емейл:</label>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="new-password">Пароль:</label>
-            <input type="password" id="new-password" name="new-password" required><br><br>
-
-            <button type="submit">Зареєструватися</button>
-        </form>
-    </div>
-
-    <div id="feedback" class="content hidden">
-        <h1>Відгук</h1>
-        <form>
-            <label for="name">Ваше ім'я:</label>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="feedback">Ваш відгук:</label>
-            <textarea id="feedback-text" name="feedback" required></textarea><br><br>
-
-            <button type="submit">Надіслати</button>
-        </form>
-    </div>
-
-    <script>
-        const links = document.querySelectorAll('nav a');
-        const sections = document.querySelectorAll('.content');
-
-        links.forEach(link => {
-            link.addEventListener('click', (event) => {
-                event.preventDefault();
-                const targetId = link.id.replace('-link', '');
-
-                sections.forEach(section => {
-                    if (section.id === targetId) {
-                        section.classList.remove('hidden');
-                    } else {
-                        section.classList.add('hidden');
-                    }
-                });
-            });
-        });
-    </script>
+    <header>
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="login.html">Вхід</a>
+            <a href="signup.html">Реєстрація</a>
+            <a href="feedback.html">Зворотний зв'язок</a>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <h1>Ласкаво просимо!</h1>
+            <p>Це головна сторінка сайту. Тут ви знайдете багато цікавої інформації.</p>
+            <div class="image-container">
+                <img src="https://th.bing.com/th/id/OIP.IQBh6w74gF29WGdHsw7pDAHaEs?w=1024&h=650&rs=1&pid=ImgDetMain" alt="Головне зображення">
+            </div>
+        </div>
+        <h2>Останні статті</h2>
+        <section class="articles">
+            <article>
+                <h3>Стаття 1</h3>
+                <p>Короткий опис першої статті. Вона містить важливу інформацію для читачів.</p>
+                <a href="#">Читати далі</a>
+            </article>
+            <article>
+                <h3>Стаття 2</h3>
+                <p>Короткий опис другої статті. Тут також є цікаві факти.</p>
+                <a href="#">Читати далі</a>
+            </article>
+            <article>
+                <h3>Стаття 3</h3>
+                <p>Короткий опис третьої статті, яка буде корисною для багатьох.</p>
+                <a href="#">Читати далі</a>
+            </article>
+            <article>
+                <h3>Стаття 4</h3>
+                <p>Деталі про четверту статтю, яка містить унікальні дані.</p>
+                <a href="#">Читати далі</a>
+            </article>
+            <article>
+                <h3>Стаття 5</h3>
+                <p>Огляд п'ятої статті, яка має цікавий контент.</p>
+                <a href="#">Читати далі</a>
+            </article>
+            <article>
+                <h3>Стаття 6</h3>
+                <p>Шоста стаття також варта уваги, адже містить важливі деталі.</p>
+                <a href="#">Читати далі</a>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Всі права захищено</p>
+    </footer>
 </body>
 </html>
